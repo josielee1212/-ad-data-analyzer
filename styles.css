@@ -1,0 +1,111 @@
+body {
+  font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 5px;
+  padding: 5px;
+}
+
+h1 {
+  text-align: center;
+  /* 標題置中 */
+  font-size: 2.5em;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+}
+
+.form-container {
+  flex: 1;
+  margin-left: 40px;
+}
+
+.results {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select,
+textarea {
+  width: 35%;
+  padding: 5px;
+  margin: 5px 0;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  width: 30%;
+  align-self: flex-start;
+  /* 保持按鈕在父容器中的水平排列 */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+label {
+  color: #0000c6;
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+  color: #333;
+}
+
+h3 {
+  color: #a23400;
+  font-weight: bold;
+}
+
+p {
+  color: #333;
+}
+
+/* 手機板樣式 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* 手機板顯示為縱向排列 */
+  }
+
+  .form-container {
+    margin: 0;
+    /* 去掉所有邊距 */
+    padding: 10px;
+    /* 添加內邊距以增加內部空間 */
+  }
+
+  .results {
+    margin-top: 10px;
+    /* 減少分析結果區塊與表單區塊之間的上邊距 */
+  }
+}

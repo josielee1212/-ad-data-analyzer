@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="main.js" type="text/javascript"></script>
+  <title>廣告數據不同期對比_v1陽春版(by Josie)</title>
+
+</head>
+
+<body>
+  <h1>廣告數據不同期對比_v1陽春版(by Josie)</h1>
+  <div class="container">
+    <div class="form-container">
+      <form id="data-form">
+        <h2>前期</h2>
+        <label>廣告花費: <input type="number" id="cost1" step="0.01" required></label><br>
+        <label>總曝光數: <input type="number" id="impressions1" step="0.01" required></label><br>
+        <label>總點擊數: <input type="number" id="clicks1" step="0.01" required></label><br>
+        <label>總轉換數: <input type="number" id="conversions1" step="0.01" required></label><br>
+
+        <h2>本期</h2>
+        <label>廣告花費: <input type="number" id="cost2" step="0.01" required></label><br>
+        <label>總曝光數: <input type="number" id="impressions2" step="0.01" required></label><br>
+        <label>總點擊數: <input type="number" id="clicks2" step="0.01" required></label><br>
+        <label>總轉換數: <input type="number" id="conversions2" step="0.01" required></label><br>
+
+        <h2>異常警戒值設定</h2>
+
+        <label>異常變化百分比: <input type="number" id="threshold" step="0.01" value="15" required> %</label>
+        <p>定義變化幅度超過多少%，需警告</p><br>
+
+        <button type="button" onclick="analyzeData()">開始分析</button>
+      </form>
+    </div>
+    <div id="results" class="results">
+      <h2>請先輸入要比較的兩個時間區間的廣告數據，再選擇警戒值範圍，即可點下按鈕後產生結果</h2>
+    </div>
+  </div>
+
+  <script src="main.js" defer></script>
+</body>
+
+</html>
